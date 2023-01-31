@@ -1,0 +1,101 @@
+:root {
+    --primary: #007ACC;
+    --error: #CF6679;
+    --background: #121212;
+    --overlay: #4d4d4d;
+    --text: #d4d4d4;
+}
+
+ol {
+    list-style-type: disc;
+    transform: rotate(180deg);
+    width: 70%;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    width: 33%; 
+    transform: rotate(-180deg);
+
+}
+
+li.incorrect {
+    color: var(--error);
+}
+
+li.unanswered {
+    color: var(--primary);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Roboto";
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.subtitle {
+    font-size: 30px;
+}
+
+#time {
+    font-size: 25px;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    color: var(--primary);
+}
+
+#score {
+    font-size: 25px;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    color: var(--primary);
+}
+
+#question {
+    font-size: 60px;
+}
+
+#wanakana-input {
+    border-radius: 20px;
+    text-align: center;
+}
+
+#start {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#game, #end, .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pad {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.japanese {
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--text);
+    border: 0px;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+}
+

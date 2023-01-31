@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary</title>
+    <link rel="stylesheet" href ="styles.css" type="text/css">
+    <script src="https://unpkg.com/wanakana"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+</head>
+
+<body>
+    <h1>Japanese Vocabulary Game</h1>
+    <div id = "start">
+        <div class = "pad">
+            <span class = "subtitle">Instructions: </span>
+        </div>
+
+        <span>Type the reading of the kanji displayed (with an English keyboard)<br>
+            If the answer is correct the next question will automatically be displayed<br>
+            Type ? to skip a question<br>
+            Type ``` to end the quiz early</span><br>
+        <div class = "pad">
+            <span class = "subtitle">Select words: </span>
+        </div>
+        
+        <input type = "radio" id = "n1" name = "selectWords" value = "n1">N1<br>
+        <input type = "radio" id = "n2" name = "selectWords" value = "n2">N2<br>
+        <input type = "radio" id = "n3" name = "selectWords" value = "n3">N3<br>
+        <input type = "radio" id = "n4" name = "selectWords" value = "n4">N4<br>
+        <input type = "radio" id = "n5" name = "selectWords" value = "n5">N5<br><br>
+        <button onclick = "startGame()">Start game</button><br>
+    </div>
+
+    <div id = "game">
+        <span id = "score">Score: 0</span>
+        <span id = "time">Time: 30</span>
+        
+        <span id = "question" class = "japanese">x</span><br>
+        <input type = "text" onkeyup = "check()" id = "wanakana-input" class = "japanese">
+    </div>
+
+    <div id = "end">
+        <div class = "pad">
+            <span id = "final_score" class = "subtitle">Game over, your score is </span><br>
+        </div>
+        <div class = "restartContainer">
+            <button onclick = "startGame()">Restart game</button>
+            <button onclick = "firstScreen()">Change level</button>
+        </div>
+    </div>
+    <div class = "container">
+        <ol id= "answers"></ol>
+    </div>
+    
+</body>
+<script src = "code.js"></script>
+</html>
