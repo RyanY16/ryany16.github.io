@@ -14,26 +14,32 @@
 <body>
     <h1>Japanese Vocabulary Game</h1>
     <div id = "start">
-        <div class = "pad">
-            <span class = "subtitle">Instructions: </span>
-        </div>
+        <h2>Instructions: </h2>
 
-        <span>Type the reading of the kanji displayed (with an English keyboard)<br>
+        <p>Type the reading of the kanji displayed (with an English keyboard)<br>
             If the answer is correct the next question will automatically be displayed<br>
             Type ? to skip a question<br>
-            Type ``` to end the quiz early</span><br>
-        <div class = "pad">
-            <span class = "subtitle">Select words: </span>
-        </div>
+            Type ``` to end the quiz early</p>
         
-        <input type = "radio" id = "n1" name = "selectWords" value = "n1">N1<br>
-        <input type = "radio" id = "n2" name = "selectWords" value = "n2">N2<br>
-        <input type = "radio" id = "n3" name = "selectWords" value = "n3">N3<br>
-        <input type = "radio" id = "n4" name = "selectWords" value = "n4">N4<br>
-        <input type = "radio" id = "n5" name = "selectWords" value = "n5">N5<br><br>
-        <button onclick = "startGame()">Start game</button><br>
-    </div>
+        <h2>Select words: </span><h2>
+        <div class = "radioButton">
+            <input type = "radio" name = "selectWords" class = "selectWords" value = "n1">N1<br>
+            <input type = "radio" name = "selectWords" class = "selectWords" value = "n2">N2<br>
+            <input type = "radio" name = "selectWords" class = "selectWords" value = "n3">N3<br>
+            <input type = "radio" name = "selectWords" class = "selectWords" value = "n4">N4<br>
+            <input type = "radio" name = "selectWords" class = "selectWords" value = "n5">N5<br><br>
+        </div>
+        <h2>Select time mode:</h2>
+        <div class = "radioButton">
+            <input type = "radio" name = "selectTime" class = "time" value = "timeOff" id = "timeOff">No Time<br>
+            <input type = "radio" name = "selectTime" class = "time" value = "30sec" id = "30sec" checked>30 sec<br>
+            <input type = "radio" name = "selectTime" class = "time" value = "60sec" id = "60sec">60 sec<br>
+        </div>
+    
+        <br><button onclick = "startGame()">Start game</button><br>
 
+    </div>
+    
     <div id = "game">
         <span id = "score">Score: 0</span>
         <span id = "time">Time: 30</span>

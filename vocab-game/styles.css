@@ -39,10 +39,6 @@ h1 {
     font-size: 40px;
 }
 
-.subtitle {
-    font-size: 30px;
-}
-
 #time {
     font-size: 25px;
     position: absolute;
@@ -81,11 +77,6 @@ h1 {
     text-align: center;
 }
 
-.pad {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .japanese {
     font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
 }
@@ -99,3 +90,13 @@ button {
     border-radius: 20px;
 }
 
+h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0 0 0 0;
+}
+
+p, .radioButton {
+    font-size: 20px;
+}

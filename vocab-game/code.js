@@ -15,19 +15,25 @@ function toggleView(id, toggle) {
 }
 
 function startGame() {
-    if (checkAtLeastOneRadio()) {
+    if (checkAtLeastOneDifficulty()) {
         score = 0;
         changeContent("score", "Score: " + score);
-        time = 30;
-        changeContent("time", "Time: " + time);
+        
+        changeContent("time", "Time: " + time); // hide
         document.getElementById("wanakana-input").value = "";
         
+        checkTime();
+        if (timerStatus) {
+            changeContent("time", "Time: " + time);
+            timer(); // disable
+        } else {
+            changeContent("time", "No time limit")
+        }
         toggleView("start", false);
         toggleView("end", false);
         toggleView("game", true);
         update(final);
-        timerStatus = true;
-        timer();
+        
     } else {
         alert("Please select an option")
     }
@@ -48,8 +54,8 @@ function firstScreen() {
     toggleView("end", false);
 }
 
-function checkAtLeastOneRadio() {
-    var check = document.querySelector("input[name = 'selectWords']:checked");
+function checkAtLeastOneDifficulty() {
+    var check = document.querySelector("input[class = 'selectWords']:checked");
     if (check != null) {
         return true;
     } else {
@@ -108,7 +114,6 @@ function listAdd(item, correct) {
 }
 
 function timer() {
-    time = 30;
     var timer = setTimeout(tick, 1000);
     function tick() {
         if (timerStatus) {
@@ -124,8 +129,8 @@ function timer() {
     }
 }
 
-const buttons = document.querySelectorAll("input[type = 'radio']")
-buttons.forEach(button => {
+const difficultySelect = document.querySelectorAll("input[class = 'selectWords']");
+difficultySelect.forEach(button => {
     button.onclick = () => {
         if (button.checked) {
             getJson(button.value);
@@ -133,11 +138,27 @@ buttons.forEach(button => {
     }
 })
 
+function checkTime() {
+    const timeSelect = document.querySelectorAll("input[class = 'time']");
+    if (document.getElementById("timeOff").checked) {
+        timerStatus = false;
+    } else if (document.getElementById("30sec").checked) {
+        time = 30;
+        timerStatus = true;
+    } else if (document.getElementById("60sec").checked) {
+        time = 60;
+        timerStatus = true;
+    }
+}
+
+
+
+
 let kanji, reading, meaning, randNo, final, results = "";
-let score, answersCount  = 0;
+let score, answersCount = 0;
 let answers = {};
 let time = 30;
-let timerStatus = false;
+let timerStatus = true;
 
 
 
