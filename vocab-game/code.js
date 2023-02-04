@@ -55,7 +55,7 @@ function firstScreen() {
 }
 
 function checkAtLeastOneDifficulty() {
-    var check = document.querySelector("input[class = 'selectWords']:checked");
+    var check = document.querySelector("input[name = 'selectWords']:checked");
     if (check != null) {
         return true;
     } else {
