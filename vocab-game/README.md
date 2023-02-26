@@ -27,6 +27,7 @@ Below the input box the kanji, hiragana reading and meaning in English will be d
 
 White = correct, read = skipped, blue = unanswered (last question before time runs out)
 
+Note - make sure your input language is English, your input will automatically be converted to hiragana
 
 
 ## Credits
