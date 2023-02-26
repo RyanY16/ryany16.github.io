@@ -1,4 +1,7 @@
 # Japanese Vocabulary Game
+
+https://ryany16.github.io/vocab-game/
+
 A game which tests your ability to read kanji characters based off JLPT level. 
 
 Learning the readings of kanji characters was one of my biggest challenges when learning Japanese, especially when the same characters are used in different compounds. 
