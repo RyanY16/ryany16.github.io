@@ -1,0 +1,4 @@
+text dim - #959BA3
+text bold - #FFFFFF
+
+bg bold - #404248
