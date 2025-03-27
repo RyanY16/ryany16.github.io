@@ -10,7 +10,7 @@ const serverData = [
             specificTitle: "Master of Science (Applied Mathematics)",
             date: "2025 - (expected)",
             details: ["Recipient of MEXT Scholarship"],
-            link: "/icons/waseda_logo.jpg"
+            link: "./icons/waseda_logo.jpg"
           },
           {
             title: "Curtin University",
